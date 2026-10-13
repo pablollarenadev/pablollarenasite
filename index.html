@@ -1,3 +1,58 @@
+
+Texto pegado.txt
+Texto pegado.txt
+TXT
+Vamos a actualizar mi sitio web:
+
+Dale un diseño que no parezca tan hecho con IA, jaja. Y en el proyecto que dice "Gestión Administrativa Aduanal", hay que poner el sistema AMSLI Web: https://amsliweb.pablollarena.site/
+
+Rediseñando el sitio y actualizando el proyecto destacado.
+Rediseñando el sitio y actualizando el proyecto destacado.
+Voy a rediseñar el sitio con una estética menos de plantilla y a sustituir el proyecto aduanal por AMSLI Web. Primero reviso qué es AMSLI Web para describirlo con precisión.
+
+Editó un archivo, creó un archivo, y 24 pasos más
+Listo, te dejo el index.html actualizado, con el diseño nuevo y AMSLI Web en el lugar de “Gestión Administrativa Aduanal”. Lo revisé en un navegador de prueba entre 320 y 1280 px de ancho y no hay desbordes ni enlaces rotos.
+
+Diseño nuevo
+
+Quité lo que más delataba la plantilla: el fondo oscuro con brillos violeta, la terminal falsa, las tarjetas idénticas con emojis, la numeración 01–04, las etiquetas en mayúsculas y la palabra resaltada en el título.
+Ahora es un fondo gris acero con texto grafito, azul de cable de red para los botones y amarillo de etiquetadora como acento. La sección de proyectos va en un bloque oscuro, como el interior de un rack.
+El hero es un rack de servidores con tus cinco sistemas como unidades, cada una con su etiqueta amarilla y un LED: verde si está en línea, ámbar si está en desarrollo. Al cargar la página los LED se encienden uno por uno; es la única animación, y se desactiva si el navegador pide menos movimiento.
+Los proyectos pasaron de tarjetas a una lista tipo inventario.
+Las habilidades quedaron como texto simple, y los chips repetidos se integraron ahí.
+Cambié las fuentes a Bricolage Grotesque e Instrument Sans.
+Reescribí el título a “Administro sistemas y desarrollo software a la medida.” y dividí “Sobre mí” en dos párrafos más una ficha de datos. Los hechos son los mismos que ya tenías.
+Conservé el SEO, el JSON-LD, el formulario de Formspree y todos los enlaces. En móvil la navegación ahora muestra los cuatro enlaces.
+AMSLI Web
+
+Es la tarjeta del lugar de “Gestión Administrativa Aduanal”, enlazada a https://amsliweb.pablollarena.site/.
+Dos cosas por confirmar:
+
+No pude abrir AMSLI Web: el sitio bloquea las consultas automáticas. Por eso la descripción es la que ya tenías de ese proyecto (“administración integral de agencias aduanales: operaciones, seguimiento documental, procesos internos”) y el stack sigue siendo Symfony, PHP y Docker. Si hace algo más específico, dime y la ajusto.
+Lo marqué “En línea” porque diste una URL activa y los otros proyectos con demo también lo están. Si sigue en desarrollo, hay que cambiar led on por led dev y el texto en la tarjeta #p-amsli y en el rack del hero, y el pie “tres en línea y dos en desarrollo” pasaría a “dos y tres”.
+Mi navegador de prueba no tuvo acceso a Google Fonts, así que las capturas usaron una tipografía de respaldo. Con las fuentes reales los anchos pueden variar un poco; vale la pena abrirlo una vez en tu navegador.
+
+
+Index
+Código·HTML 
+Assist-ticket está hecho con next, no con PHP
+
+Editó un archivo, compartió un archivo, ejecutó un comando
+Corregido: en Assist-Ticket quité Symfony y PHP, y ahora la línea de tecnologías dice “Next.js, Docker”. Te dejé el index.html actualizado.
+
+Dejé Docker porque estaba en tu versión original y solo me corregiste el framework. Si ya no aplica o tiene otras piezas (base de datos, API, etc.), dime y lo ajusto.
+
+El resumen de arriba (“desarrollo sistemas propios con Symfony y Flutter”) no menciona Next.js. ¿Quieres que lo agregue ahí y en “Sobre mí”?
+
+
+Index
+Código·HTML 
+
+
+
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,18 +60,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pablo Llarena | Administrador de Sistemas</title>
   <meta name="description" content="Portafolio de Pablo Llarena: administración de sistemas, infraestructura TI, ciberseguridad y desarrollo de software a medida." />
-
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+ 
   <meta property="og:title" content="Pablo Llarena | Administrador de Sistemas" />
   <meta property="og:description" content="Administración de sistemas, infraestructura TI, ciberseguridad y desarrollo de software." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/img/cover.jpg" />
   <meta name="theme-color" content="#e4e6e0" />
   <link rel="icon" href="/favicon.ico" />
-
+ 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,7 +82,7 @@
     "sameAs": ["https://www.linkedin.com/in/pablo-llarena-l%C3%B3pez-725552bb/"]
   }
   </script>
-
+ 
   <style>
     /* ── TOKENS ── */
     :root {
@@ -49,7 +104,7 @@
       --sans:    "Instrument Sans", system-ui, sans-serif;
       --mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     }
-
+ 
     /* ── BASE ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; }
     html { scroll-behavior: smooth; }
@@ -69,13 +124,13 @@
     .band-dark :focus-visible, .rack :focus-visible { outline-color: var(--tape); }
     .wrap { max-width: 1120px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 48px); }
     .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
+ 
     /* ── ESTADO (LED) ── */
     .led { width: 9px; height: 9px; border-radius: 50%; background: #444b52; flex: none; }
     .led.on  { background: var(--led);   box-shadow: 0 0 7px 1px rgba(47,193,93,.65); }
     .led.dev { background: var(--amber); box-shadow: 0 0 7px 1px rgba(240,163,31,.6); }
     .state { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; }
-
+ 
     /* ── HEADER ── */
     .site-header {
       position: sticky; top: 0; z-index: 50;
@@ -92,7 +147,7 @@
     .site-nav a:hover { color: var(--ink); background: rgba(27,31,35,.07); }
     .site-nav a[href="#contacto"] { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
     .site-nav a[href="#contacto"]:hover { background: var(--ink); color: var(--paper); }
-
+ 
     /* ── HERO ── */
     .hero { padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 8vw, 104px); }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 56px; align-items: center; }
@@ -118,7 +173,7 @@
       text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px;
     }
     .text-link:hover { color: var(--cobalt-d); }
-
+ 
     /* Rack: el elemento memorable */
     .rack-wrap { width: 100%; max-width: 480px; justify-self: center; }
     .rack {
@@ -156,14 +211,14 @@
     .unit.u2 .vents { margin-block: 20px; }
     .rack .state { font-size: 12.5px; color: var(--rack-ink-2); white-space: nowrap; }
     .rack-wrap figcaption { margin-top: 18px; font-size: 14px; color: var(--ink-2); max-width: 42ch; }
-
+ 
     /* Único momento animado: los LED se encienden uno a uno */
     @keyframes led-on { from { background: #444b52; box-shadow: none; } }
     .rack .led.on, .rack .led.dev {
       animation: led-on .45s ease-out both;
       animation-delay: calc(var(--i, 0) * 170ms + 400ms);
     }
-
+ 
     /* ── BANDAS ── */
     .band { padding: clamp(64px, 9vw, 112px) 0; scroll-margin-top: 64px; }
     .band-alt { background: var(--panel); }
@@ -174,7 +229,7 @@
       line-height: 1.1; letter-spacing: -.025em;
       font-variation-settings: "wdth" 92;
     }
-
+ 
     /* ── SOBRE MÍ ── */
     .prose { font-size: 18px; line-height: 1.7; }
     .prose p { max-width: 62ch; }
@@ -183,13 +238,13 @@
     .facts > div { padding: 16px 0 18px; border-top: 1px solid var(--rule); }
     .facts dt { font-size: 14px; color: var(--ink-2); }
     .facts dd { font-weight: 600; }
-
+ 
     /* ── HABILIDADES ── */
     .skills { display: grid; column-gap: 48px; }
     .skill { padding: 22px 0 30px; border-top: 1px solid var(--rule); }
     .skill h3 { font-size: 20px; font-weight: 600; letter-spacing: -.015em; margin-bottom: 8px; font-variation-settings: "wdth" 94; }
     .skill p { font-size: 16px; color: var(--ink-2); max-width: 46ch; }
-
+ 
     /* ── PROYECTOS ── */
     .band-head { display: grid; gap: 12px; margin-bottom: 48px; }
     .band-head p { color: var(--rack-ink-2); max-width: 50ch; }
@@ -212,7 +267,7 @@
       text-decoration-thickness: 2px; text-underline-offset: 5px;
     }
     .svc-meta a:hover { color: var(--tape); }
-
+ 
     /* ── CONTACTO ── */
     .contact { display: grid; gap: 56px; }
     .form { display: grid; gap: 18px; }
@@ -232,11 +287,11 @@
     .avail > p:nth-child(2) { margin-top: 10px; color: var(--ink-2); }
     .linkedin { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; }
     .linkedin svg { width: 18px; height: 18px; }
-
+ 
     /* ── FOOTER ── */
     .site-footer { border-top: 1px solid var(--rule); padding: 28px 0; font-size: 14px; color: var(--ink-2); }
     .footer-inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-
+ 
     /* ── BREAKPOINTS ── */
     @media (min-width: 640px) {
       .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; }
@@ -262,7 +317,7 @@
       .band { scroll-margin-top: 16px; }
       .rack { padding-inline: 32px; }
     }
-
+ 
     @media (max-width: 440px) {
       .rack { padding-inline: 30px; }
       .unit { padding: 0 10px; gap: 8px; }
@@ -271,7 +326,7 @@
       .tape { font-size: 13px; padding: 5px 8px 6px; }
       .rack .state { font-size: 12px; gap: 6px; }
     }
-
+ 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .rack .led { animation: none !important; }
@@ -280,7 +335,7 @@
   </style>
 </head>
 <body>
-
+ 
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="#top">
@@ -295,9 +350,9 @@
       </nav>
     </div>
   </header>
-
+ 
   <main>
-
+ 
     <!-- HERO -->
     <section class="hero" id="top">
       <div class="wrap hero-grid">
@@ -309,7 +364,7 @@
             <a href="https://drive.google.com/file/d/19R5t9AHyKGcY-2bbHpIueuAcMtLSYg3s/view?usp=sharing" target="_blank" rel="noopener" class="text-link">Descargar CV</a>
           </div>
         </div>
-
+ 
         <figure class="rack-wrap">
           <ul class="rack" aria-label="Estado de mis sistemas">
             <li>
@@ -352,7 +407,7 @@
         </figure>
       </div>
     </section>
-
+ 
     <!-- SOBRE MÍ -->
     <section id="sobre-mi" class="band">
       <div class="wrap cols">
@@ -371,7 +426,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- HABILIDADES -->
     <section id="habilidades" class="band band-alt">
       <div class="wrap cols">
@@ -404,7 +459,7 @@
         </div>
       </div>
     </section>
-
+ 
     <!-- PROYECTOS -->
     <section id="proyectos" class="band band-dark">
       <div class="wrap">
@@ -412,9 +467,9 @@
           <h2>Proyectos</h2>
           <p>Sistemas propios para automatizar procesos de negocio reales.</p>
         </div>
-
+ 
         <div class="svc-list">
-
+ 
           <article class="svc main" id="p-asistlav">
             <div>
               <h3>AsistLav</h3>
@@ -429,7 +484,7 @@
               <a href="https://asistlav.pablollarena.site/auth-login" target="_blank" rel="noopener">Abrir demo</a>
             </div>
           </article>
-
+ 
           <article class="svc" id="p-assist-ticket">
             <div>
               <h3>Assist-Ticket</h3>
@@ -437,14 +492,14 @@
             </div>
             <div class="svc-body">
               <p>Gestión de tickets de soporte técnico: apertura, seguimiento, asignación por área y cierre de incidencias. Pensado para equipos de TI internos.</p>
-              <p class="svc-stack">Symfony, PHP, Docker</p>
+              <p class="svc-stack">Next.js, Docker</p>
             </div>
             <div class="svc-meta">
               <span class="state"><span class="led on" aria-hidden="true"></span>En línea</span>
               <a href="https://assist-ticket.pablollarena.site/" target="_blank" rel="noopener">Abrir demo</a>
             </div>
           </article>
-
+ 
           <article class="svc" id="p-amsli">
             <div>
               <h3>AMSLI Web</h3>
@@ -459,7 +514,7 @@
               <a href="https://amsliweb.pablollarena.site/" target="_blank" rel="noopener">Abrir sistema</a>
             </div>
           </article>
-
+ 
           <article class="svc" id="p-inventario">
             <div>
               <h3>Inventario TI</h3>
@@ -473,7 +528,7 @@
               <span class="state"><span class="led dev" aria-hidden="true"></span>En desarrollo</span>
             </div>
           </article>
-
+ 
           <article class="svc" id="p-previos">
             <div>
               <h3>Previos Aduaneros</h3>
@@ -487,11 +542,11 @@
               <span class="state"><span class="led dev" aria-hidden="true"></span>En desarrollo</span>
             </div>
           </article>
-
+ 
         </div>
       </div>
     </section>
-
+ 
     <!-- CONTACTO -->
     <section id="contacto" class="band">
       <div class="wrap cols">
@@ -513,7 +568,7 @@
             <button type="submit" class="btn">Enviar mensaje</button>
             <p class="form-note">Al enviar aceptas el uso de tu información para contactarte.</p>
           </form>
-
+ 
           <aside class="avail">
             <p class="avail-title"><span class="led on" aria-hidden="true"></span>Disponible para nuevos retos</p>
             <p>Estoy abierto a posiciones como Administrador de Sistemas o líder de TI, y a proyectos freelance de desarrollo de software. ¿Tienes algo en mente? Escríbeme.</p>
@@ -526,19 +581,21 @@
         </div>
       </div>
     </section>
-
+ 
   </main>
-
+ 
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>© <span id="y"></span> Pablo Llarena</span>
       <span>Administrador de Sistemas, Querétaro, México</span>
     </div>
   </footer>
-
+ 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
+ 
 </body>
 </html>
+ 
+Claude terminó la respuesta
